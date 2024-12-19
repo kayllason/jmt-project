@@ -1,13 +1,12 @@
 import Card from './Card';
+import { mockData } from './../constants/foodData';
 
 export default function List() {
-  const foodData = ['pizza', 'pasta', 'kimbab', 'bulgogi', 'sushi', 'ramen', 'saled'];
-
   return (
     <div className="px-20">
       <div className="flex flex-wrap justify-start gap-4 ">
-        {foodData.map((food, i) => {
-          return <Card key={i} title={food} />;
+        {mockData.map(foodData => {
+          return <Card key={foodData.id} foodData={foodData} />;
         })}
       </div>
     </div>

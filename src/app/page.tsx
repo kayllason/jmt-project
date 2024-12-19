@@ -1,9 +1,9 @@
-import Image from "next/image";
+import List from './components/List';
 
 export default function Home() {
   return (
     <div>
-      <h1>JMT Project</h1>
+      <List />
     </div>
   );
 }

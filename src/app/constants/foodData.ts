@@ -1,4 +1,4 @@
-const mockData = [
+export const mockData = [
   { id: 'food-001', name: '김치찌개', imageURL: '', category: '한식' },
   { id: 'food-002', name: '불고기', imageURL: '', category: '한식' },
   { id: 'food-003', name: '비빔밥', imageURL: '', category: '한식' },
@@ -21,4 +21,4 @@ const mockData = [
   { id: 'food-020', name: '마라탕', imageURL: '', category: '중식' },
 ];
 
-const category = ['양식', '한식', '일식', '중식', '간편식', '디저트', '분식', '기타'];
+export const category = ['양식', '한식', '일식', '중식', '간편식', '디저트', '분식', '기타'];

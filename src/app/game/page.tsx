@@ -1,7 +1,9 @@
+import RouletteWheel from './components/RouletteWheel';
+
 export default function Page() {
   return (
-    <div>
-      <h1>룰렛</h1>
-    </div>
+    <main className="p-8">
+      <RouletteWheel />
+    </main>
   );
 }

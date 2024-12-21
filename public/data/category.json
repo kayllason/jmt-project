@@ -1,0 +1,38 @@
+{
+    "data": [
+      {
+        "id": 1,
+        "categoryId": "C1",
+        "name" : "양식"
+      },{
+        "id": 2,
+        "categoryId": "C2",
+        "name" : "한식"
+      },{
+        "id": 3,
+        "categoryId": "C3",
+        "name" : "일식"
+      },{
+        "id": 4,
+        "categoryId": "C4",
+        "name" : "중식"
+      },{
+        "id": 5,
+        "categoryId": "C5",
+        "name" : "간편식"
+      },{
+        "id": 6,
+        "categoryId": "C6",
+        "name" : "디저트"
+      },{
+        "id": 7,
+        "categoryId": "C7",
+        "name" : "분식"
+      },{
+        "id": 8,
+        "categoryId": "C8",
+        "name" : "기타"
+      }
+    ]
+  }
+  

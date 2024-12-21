@@ -1,0 +1,137 @@
+{
+    "data": [
+      {
+        "id": 1,
+        "imageURL":"/images/bibimbap.jpg",
+        "name": "비빔밥",
+        "categoryId" : "C2",
+        "category" : "한식" 
+      },
+      {
+        "id": 2,
+        "imageURL":"/images/bibimNaengmyeon.jpg",
+        "name": "비빔냉면",
+        "categoryId" : "C2",
+        "category" : "한식" 
+      },{
+        "id": 3,
+        "imageURL":"/images/chicken.jpg",
+        "name": "치킨",
+        "categoryId" : "C2",
+        "category" : "한식" 
+      },
+      {
+        "id": 4,
+        "imageURL":"/images/cupramen.jpg",
+        "name": "컵라면",
+        "categoryId" : "C5",
+        "category" : "간편식" 
+        
+      },{
+        "id": 5,
+        "imageURL":"/images/dimsum.jpg",
+        "name": "딤섬",
+        "categoryId" : "C4",
+        "category" : "중식" 
+      },
+      {
+        "id": 6,
+        "imageURL":"/images/grilleddumplings.jpg",
+        "name": "군만두",
+        "categoryId" : "C2",
+        "category" : "한식" 
+        
+      },{
+        "id": 7,
+        "imageURL":"/images/hamburger.jpg",
+        "name": "햄버거",
+        "categoryId" : "C1",
+        "category" : "양식" 
+      },
+      {
+        "id": 8,
+        "imageURL":"/images/jjamppong.jpg",
+        "name": "짬뽕",
+        "categoryId" : "C4",
+        "category" : "중식" 
+        
+      },{
+        "id": 9,
+        "imageURL":"/images/kimbab.jpg",
+        "name": "김밥",
+        "categoryId" : "C2",
+        "category" : "한식" 
+      },
+      {
+        "id": 10,
+        "imageURL":"/images/kimchisoup.jpg",
+        "name": "김치찌개",
+        "categoryId" : "C2",
+        "category" : "한식" 
+        
+      },{
+        "id": 11,
+        "imageURL":"/images/nakgopsae.jpg",
+        "name": "낙곱새",
+        "categoryId" : "C2",
+        "category" : "한식" 
+      },
+      {
+        "id": 12,
+        "imageURL":"/images/potrice.jpg",
+        "name": "솥밥",
+        "categoryId" : "C2",
+        "category" : "한식" 
+        
+      },{
+        "id": 13,
+        "imageURL":"/images/rawfish.jpg",
+        "name": "물회",
+        "categoryId" : "C2",
+        "category" : "한식" 
+      },
+      {
+        "id": 14,
+        "imageURL":"/images/saltbread.jpg",
+        "name": "소금빵",
+        "categoryId" : "C6",
+        "category" : "디저트" 
+        
+      },{
+        "id": 15,
+        "imageURL":"/images/shabushabu.jpg",
+        "name": "샤브샤브",
+        "categoryId" : "C3",
+        "category" : "일식" 
+      },
+      {
+        "id": 16,
+        "imageURL":"/images/steak.jpg",
+        "name": "스테이크",
+        "categoryId" : "C1",
+        "category" : "양식" 
+        
+      },{
+        "id": 17,
+        "imageURL":"/images/tteokbokki.jpg",
+        "name": "떡볶이",
+        "categoryId" : "C2",
+        "category" : "한식" 
+      },
+      {
+        "id": 18,
+        "imageURL":"/images/waffle.jpg",
+        "name": "와플",
+        "categoryId" : "C6",
+        "category" : "디저트" 
+        
+      },{
+        "id": 19,
+        "imageURL":"/images/pizza.jpg",
+        "name": "피자",
+        "categoryId" : "C1",
+        "category" : "양식" 
+      }
+    ]
+  }
+  

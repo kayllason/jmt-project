@@ -16,12 +16,12 @@ export default function List() {
   const [checkedItems, setCheckedItems] = useState<string[]>([]);
   const [foodData, setFoodData] = useState<Food[]>([]);
   const [filteredFoodData, setFilteredFoodData] = useState<Food[]>([]);
-  const [loading, setLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const fetchData = async () => {
-    if (loading) return;
+    if (isLoading) return;
 
-    setLoading(true);
+    setIsLoading(true);
     try {
       const response = await fetch(`/data/list.json`);
       const result = await response.json();
@@ -29,7 +29,7 @@ export default function List() {
     } catch (error) {
       console.error('데이터 불러오기 도중 오류가 발생하였습니다.', error);
     } finally {
-      setLoading(false);
+      setIsLoading(false);
     }
   };
 

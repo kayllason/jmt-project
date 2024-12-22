@@ -15,7 +15,8 @@ export const RouletteResultModal: React.FC<ModalProps> = ({ result, onClose }) =
 
   const handleRedirect = () => {
     const searchUrl = `https://map.naver.com/p/search/${result}맛집`;
-    window.open(searchUrl, '_blank');
+    const newWindow = window.open(searchUrl, '_blank', 'noopener,noreferrer');
+    if (newWindow) newWindow.opener = null;
   };
 
   return (

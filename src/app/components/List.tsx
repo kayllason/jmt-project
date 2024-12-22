@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import Category from './Category';
 import Card from './Card';
 
@@ -50,13 +51,21 @@ export default function List() {
   }, [checkedItems, foodData]);
 
   return (
-    <div className="px-20">
-      <Category checkedItems={checkedItems} setCheckedItems={setCheckedItems} />
-      <div className="flex flex-wrap justify-start gap-4">
-        {filteredFoodData.map((food: Food) => (
-          <Card key={`food${food.id}`} foodData={food} />
-        ))}
+    <>
+      <div className="relative px-20">
+        <Category checkedItems={checkedItems} setCheckedItems={setCheckedItems} />
+        <div className="flex flex-wrap justify-start gap-4 mt-5">
+          {filteredFoodData.map((food: Food) => (
+            <Card key={`food${food.id}`} foodData={food} />
+          ))}
+        </div>
       </div>
-    </div>
+      <button
+        className="fixed bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 py-8 px-16 text-4xl bg-[#FF4D4D] hover:bg-red-700 transition-colors text-white font-bold py-2 px-4 rounded-full"
+        onClick={fetchData}
+      >
+        <Link href="/game">랜덤 룰렛돌리기!</Link>
+      </button>
+    </>
   );
 }

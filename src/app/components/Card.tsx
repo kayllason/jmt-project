@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-interface FoodData {
+export interface FoodData {
   id: number;
   name: string;
   imageURL: string;

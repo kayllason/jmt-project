@@ -1,30 +1,30 @@
 'use client';
-import { mockData } from '@/app/constants/foodData';
 import { useState } from 'react';
 import { RouletteResultModal } from './RouletteResultModal';
+import { FoodData } from '@/app/components/Card';
 
 interface RouletteWheelProps {
   spinDuration?: number;
   size?: 'sm' | 'md' | 'lg';
 }
 
-const RouletteWheel: React.FC<RouletteWheelProps> = ({ spinDuration = 5000, size = 'lg' }) => {
+const RouletteWheel: React.FC<RouletteWheelProps> = ({ spinDuration = 2000, size = 'lg' }) => {
   const [isSpinning, setIsSpinning] = useState<boolean>(false);
   const [rotation, setRotation] = useState<number>(0);
-  const [result, setResult] = useState<string | null>(null);
+  const [result, setResult] = useState<FoodData | undefined>(undefined);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   const sizeClasses = {
     sm: 'w-48 h-48',
     md: 'w-64 h-64',
-    lg: 'w-96 h-96',
+    lg: 'w-[36rem] h-[36rem]',
   };
 
   const spinWheel = async (): Promise<void> => {
     if (isSpinning) return;
 
     setIsSpinning(true);
-    setResult(null);
+    setResult(undefined);
 
     const spinDegrees = 1080 + Math.random() * 720;
     setRotation(prev => prev + spinDegrees);
@@ -38,9 +38,19 @@ const RouletteWheel: React.FC<RouletteWheelProps> = ({ spinDuration = 5000, size
     }, spinDuration);
   };
 
-  const fetchRandomResult = async (): Promise<string> => {
-    const randomIndex = Math.floor(Math.random() * mockData.length);
-    return mockData[randomIndex].name;
+  const fetchRandomResult = async (): Promise<FoodData | undefined> => {
+    try {
+      const response = await fetch('/data/list.json');
+      if (!response.ok) {
+        throw new Error('Failed to fetch data');
+      }
+      const data = await response.json();
+      const randomIndex = Math.floor(Math.random() * data.data.length);
+      return data.data[randomIndex];
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      return undefined;
+    }
   };
 
   return (

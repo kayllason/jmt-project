@@ -23,7 +23,7 @@ export default function List() {
 
     setIsLoading(true);
     try {
-      const response = await fetch(`/data/list.json`);
+      const response = await fetch(`/data/foodList.json`);
       const result = await response.json();
       setFoodData(result.data);
     } catch (error) {

@@ -1,3 +1,3 @@
-export const Nav = () => {
+export default function Nav() {
   return <div>Nav</div>;
-};
+}

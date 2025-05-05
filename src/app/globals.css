@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: '레코체';
+    src: url('/fonts/Recipekorea-레코체-FONT.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  

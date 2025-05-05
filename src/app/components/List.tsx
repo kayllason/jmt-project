@@ -52,16 +52,20 @@ export default function List() {
 
   return (
     <>
-      <div className="relative px-20">
-        <Category checkedItems={checkedItems} setCheckedItems={setCheckedItems} />
-        <div className="flex flex-wrap justify-start gap-4 mt-5">
+      <div className="flex px-20">
+        <div className="w-1/4 sticky top-20 self-start mt-20">
+          <Category checkedItems={checkedItems} setCheckedItems={setCheckedItems} />
+        </div>
+
+        <div className="w-3/4 flex flex-wrap justify-start gap-8 ml-5 mt-5">
           {filteredFoodData.map((food: Food) => (
             <Card key={`food${food.id}`} foodData={food} />
           ))}
         </div>
       </div>
+
       <button
-        className="fixed bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 py-8 px-16 text-4xl bg-[#FF4D4D] hover:bg-red-700 transition-colors text-white font-bold py-2 px-4 rounded-full"
+        className="fixed bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 py-8 px-16 text-4xl bg-[#FF4D4D] hover:bg-red-700 transition-colors text-white rounded-full"
         onClick={fetchData}
       >
         <Link href="/game">랜덤 룰렛돌리기!</Link>

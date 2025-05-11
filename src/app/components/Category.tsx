@@ -47,7 +47,7 @@ export default function Category({ checkedItems, setCheckedItems }: CategoryProp
     <>
       <ul className="items-center w-full text-sm font-medium text-gray-900 bg-[#ffffff] rounded-lg dark:text-white">
         {categoryData.length > 0 && (
-          <li className="w-full sm:border-b-0 sm:border-r">
+          <li className="w-full sm:border-b-0 sm:border-r min-w-[140px]">
             <div className="flex items-center ps-3">
               <input
                 id="all-checkbox"
@@ -64,7 +64,7 @@ export default function Category({ checkedItems, setCheckedItems }: CategoryProp
         )}
 
         {categoryData.map(category => (
-          <li key={category.id} className="w-full sm:border-b-0 sm:border-r">
+          <li key={category.id} className="w-full sm:border-b-0 sm:border-r min-w-[140px]">
             <div className="flex items-center ps-3">
               <input
                 id={`category${category.id}`}

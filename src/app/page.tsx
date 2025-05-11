@@ -1,11 +1,13 @@
-import List from './components/List';
 import Nav from './components/Nav';
+import List from './components/List';
 
 export default function Home() {
   return (
     <>
       <Nav />
-      <List />
+      <div className="pt-16">
+        <List />
+      </div>
     </>
   );
 }
